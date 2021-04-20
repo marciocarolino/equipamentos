@@ -3,8 +3,16 @@ const mongoose = require('mongoose');
 const cadComputer = mongoose.model('cadastroComputador');
 
 exports.get = ( request, response, next) =>{
-    cadComputer.find({});
-  }
+    cadComputer.find({}).then(data => {
+      response.status(200).send(data);
+    }).catch(error =>{
+      response.status(201).send({
+        message:'Falha ao buscar os computadores',
+        data: error
+      })
+    });
+}
+
 
 exports.post = ( request, response, next) =>{
   //let cadastro = new cadComputer(request.body);

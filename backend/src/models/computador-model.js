@@ -16,15 +16,14 @@ const schema = new Schema({
   nomeUsuario:{
     type: String,
     required: [true, 'Valor obrigatório'],
-    trim: true
   },
   nomeComputador:{
     type: String,
     required: true
   },
   ipComputador:{
-    type: Number,
-    required: true
+    type: String,
+    required: [true, 'informe o ip do computador']
   },
   setorFuncionario:{
     type: String,
@@ -32,16 +31,19 @@ const schema = new Schema({
   },
   ramalFuncionario:{
     type: Number,
-    required: false
+    required: false,
+    trim: true
   },
   emailFuncionario:{
     type: String,
-    required: true
+    required: true,
+    trim: true
   },
   active:{
     type: Boolean,
     required: true,
-    default: true
+    default: true,
+    trim: true
   }
 });
 
