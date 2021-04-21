@@ -18,5 +18,4 @@ mongoose.connection.once('open',function(){
   console.log('Error', err);
 });
 
-
 module.exports = mongoose;

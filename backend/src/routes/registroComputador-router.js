@@ -6,6 +6,9 @@ const controller = require('../controllers/registroComputador-controllers');
 
 
 router.get('/',controller.get);
+router.get('/:ipComputador',controller.getByIpComputador);
 router.post('/',controller.post);
+router.put('/:id',controller.put);
+router.delete('/:ipComputador',controller.delete);
 
 module.exports = router;

@@ -4,10 +4,11 @@
 
 
 
-#Lista do que preciso fazer
+**#Lista do que preciso fazer**
 - [x] iniciar o projeto com nodejs
 - [x] instalar o nodemon, configurar o package.json
 - [x] instalar o express
+- [x] instalar cors
 - [x] criar o arquivo index e usar o express
 - [x] criar primeira rota.
 - [x] criar primeiro controller
@@ -46,4 +47,7 @@
 * Responsável
 * Ramal Responsável do Servidor
 
-==> Criar schema para registrar todos os ramais.
+**==> Criar schema para registrar todos os ramais.**
+* ramal
+* setor
+* nome do colaborador 
