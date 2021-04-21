@@ -53,7 +53,7 @@ exports.post = ( request, response, next) =>{
 
 //Atualizando um computador
 exports.put = ( request, response, next) =>{
-    cadComputer.findByIdAndUpdate(request.params.id, {
+    cadComputer.findOneAndUpdate(request.params.ipComputador, {
       $set:{
         nomeUsuario:request.body.nomeUsuario,
         nomeComputador: request.body.nomeComputador,
