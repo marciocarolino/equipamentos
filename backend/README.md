@@ -3,12 +3,12 @@
 #Exemplo.: Nome do computador, IP, Quantidade de memória, HD, Etc....
 
 
-
 **#Lista do que preciso fazer**
 - [x] iniciar o projeto com nodejs
 - [x] instalar o nodemon, configurar o package.json
 - [x] instalar o express
 - [x] instalar cors
+- [x] instalar compression
 - [x] criar o arquivo index e usar o express
 - [x] criar primeira rota.
 - [x] criar primeiro controller
@@ -20,7 +20,7 @@
 /*========================================*/
 
 **==> Criar schema para registrar Computador**
-1. -> Registrar máquina cliente Computador
+1. -> Registrar máquina colaborador(a) Computador
 #Campos necessários para cadastrar o equipamento:
 * nome usuário
 * nome computador
@@ -51,3 +51,9 @@
 * ramal
 * setor
 * nome do colaborador 
+
+**==> Criar o cadastro do usuário e se é ADM ou não**
+* nomeUsuario ( String )
+* setorUsuario ( String )
+* ramalUsuario ( Number )
+* AdminUser ( boolean )

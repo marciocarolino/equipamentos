@@ -2,6 +2,11 @@
 const bodyParser = require('body-parser');
 const app = require('./src/config/custom-express');
 const port = 3000;
+const compression = require('compression');
+
+
+app.use(compression());
+
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({

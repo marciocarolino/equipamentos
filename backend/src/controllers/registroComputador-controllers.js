@@ -2,7 +2,7 @@
 const mongoose = require('mongoose');
 const cadComputer = mongoose.model('cadastroComputador');
 
-//Mostra todos os idens cadastrados
+//Mostrar todos os idens cadastrados
 exports.get = ( request, response, next) =>{
     cadComputer.find({}).then(data => {
       response.status(200).send(data);
@@ -26,7 +26,7 @@ exports.getByIpComputador = ( request, response, next) =>{
   });
 }
 
-
+//Cadastrar novo computador
 exports.post = ( request, response, next) =>{
   //let cadastro = new cadComputer(request.body);
   let cadastro = new cadComputer();
