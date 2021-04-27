@@ -1,9 +1,13 @@
 'use strict'
 const bodyParser = require('body-parser');
+const normalizePort = require('normalize-port');
 const app = require('./src/config/custom-express');
-const port = 3000;
+const port = normalizePort(process.env.PORT || '4000');
+const cors = require('cors');
 const compression = require('compression');
 
+
+app.use(cors());
 
 app.use(compression());
 
@@ -21,7 +25,6 @@ app.connect(mongoose);
 //Chamando minha primeira rota..
 const index = require('./src/routes/index-router');
 app.use('/', index);
-
 
 //Carregando os models.
 const computador = require('./src/models/computador-model');
