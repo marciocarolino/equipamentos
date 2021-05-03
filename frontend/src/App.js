@@ -1,4 +1,5 @@
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Table from 'react-bootstrap/Table';
 import api from '../src/service/api'
 import { Component } from 'react';
 
@@ -17,17 +18,30 @@ class App extends Component{
   render(){
    const {computadores} = this.state;
 
-    return(
+    return( 
       <div>
-        <h1>Listar os computadores</h1>
-        {computadores.map(computador =>{
-          <li key={computador.active = true}>
-            <h2>
-              <strong>Computador: </strong>
-              {computador.nomeComputador}
-            </h2>
-          </li>
-        })}
+       <Table responsive="sm" striped bordered hover size="sm">
+        <thead>
+          <tr>
+          <th>ID</th>
+          <th>Nome Computador</th>
+          <th>Ip Computador</th>
+          <th>Setor</th>
+          <th>Ramal</th>
+         </tr>
+        </thead>
+        <tbody>
+        {computadores.map((computador) => (     
+    <tr key={computador._id}>
+      <td>{computador._id}</td>
+      <td>{computador.nomeComputador}</td>
+      <td>{computador.ipComputador}</td>
+      <td>{computador.setorFuncionario}</td>
+      <td>{computador.ramalFuncionario}</td>
+    </tr>
+      ))}
+  </tbody>
+       </Table>
       </div>
     );
   }
